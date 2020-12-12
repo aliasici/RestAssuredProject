@@ -27,7 +27,7 @@ public class RestAssuredMethodChaining {
 
          //http://54.174.216.245:8000/api/hello
         when().
-                get("http://54.174.216.245:8000/api/hello").   // sending a request to this url
+                get("http://18.234.80.193:8000/api/hello").   // sending a request to this url
         then().                         // asssrtions start here
                 statusCode(200).        // asserting status code is 200
                 header("Content-Length", "17" ) ;  // asserting header is "17"
@@ -40,7 +40,7 @@ public class RestAssuredMethodChaining {
 
 
         when().
-                get("http://54.174.216.245:8000/api/hello").   // sending a request to this url
+                get("http://18.234.80.193:8000/api/hello").   // sending a request to this url
                 prettyPeek().
         then().                         // asssrtions start here
                 statusCode( is(200) ).        // asserting status code is 200
@@ -68,7 +68,7 @@ public class RestAssuredMethodChaining {
             given().
                     header("Accept","application/xml").
             when().
-                    get("http://54.174.216.245:8000/api/spartans").
+                    get("http://18.234.80.193:8000/api/spartans").
                     prettyPeek().
             then().
                     statusCode( is(200) )
